@@ -2,6 +2,8 @@ import cv2
 import mediapipe as mp
 import time
 import sys
+import serial
+#arduino = serial.Serial(port='COM3', baudrate=9600, timeout=0.01)
 
 current_time = 0
 previous_time = 0
@@ -54,7 +56,12 @@ while cv2.waitKey(1) != 27:
                 control.append(1)
             else:
                 control.append(0)
-        print(control)
+        
+        string2serial = ' '.join(map(str, control))
+        string2serial = ''.join(string2serial.split())
+        print(string2serial)
+        #arduino.write(string2serial.encode())
+        #time.sleep(3)
 
     # calculating fps
     current_time = time.time()
