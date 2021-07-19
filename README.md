@@ -9,7 +9,7 @@
 *Disclaimer - The purpose of this project was NOT to make a robotic hand but to achieve actuation in different ways.*
 I've used an Arduino board, 4 servos (the fifth one broke), each to control one finger.
 
-![Image1](images/hand1.jpg){height=400px width=500px}  
+<img src="https://github.com/haubergeon/Yondu-hand/blob/main/images/hand1.jpg" width="50">
 ![Image2](images/hand2.jpg)
 
 
