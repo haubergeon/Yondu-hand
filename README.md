@@ -10,5 +10,5 @@
 I've used an Arduino board, 4 servos (the fifth one broke), each to control one finger.
 
 ![Image1](images/hand1.jpg)
-
+![Image2](images/hand2.jpg)
 
