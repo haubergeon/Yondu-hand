@@ -3,10 +3,12 @@ import mediapipe as mp
 import time
 import sys
 import serial
-#arduino = serial.Serial(port='COM3', baudrate=9600, timeout=0.01)
+arduino = serial.Serial(port='COM3', baudrate=9600, timeout=0.01)
 
 current_time = 0
 previous_time = 0
+
+sendData = True
 
 # choosing camera
 s = 0
@@ -60,8 +62,10 @@ while cv2.waitKey(1) != 27:
         string2serial = ' '.join(map(str, control))
         string2serial = ''.join(string2serial.split())
         print(string2serial)
-        #arduino.write(string2serial.encode())
-        #time.sleep(3)
+
+        if (sendData == True):
+            arduino.write(bytes(string2serial, 'utf-8'))
+            time.sleep(4)
 
     # calculating fps
     current_time = time.time()
